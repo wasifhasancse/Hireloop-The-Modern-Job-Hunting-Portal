@@ -1,5 +1,6 @@
 import CTABanner from "@/components/CTABanner/CTABanner";
 import FeaturesJob from "@/components/FeaturesJob/FeaturesJob";
+import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
 import JobDiscover from "@/components/JobDiscover/JobDiscover";
 import Navbar from "@/components/Navbar/Navbar";
@@ -19,6 +20,8 @@ export default function Home() {
         <JobDiscover />
         <CTABanner />
       </main>
+
+      <Footer />
     </div>
   );
 }
