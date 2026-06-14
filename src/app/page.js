@@ -1,3 +1,4 @@
+import CTABanner from "@/components/CTABanner/CTABanner";
 import FeaturesJob from "@/components/FeaturesJob/FeaturesJob";
 import Hero from "@/components/Hero/Hero";
 import JobDiscover from "@/components/JobDiscover/JobDiscover";
@@ -16,6 +17,7 @@ export default function Home() {
         <FeaturesJob />
         <Pricing />
         <JobDiscover />
+        <CTABanner />
       </main>
     </div>
   );
