@@ -1,3 +1,4 @@
+import FeaturesJob from "@/components/FeaturesJob/FeaturesJob";
 import Hero from "@/components/Hero/Hero";
 import JobDiscover from "@/components/JobDiscover/JobDiscover";
 import Navbar from "@/components/Navbar/Navbar";
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero />
         <Stats />
         <JobDiscover />
+        <FeaturesJob />
       </main>
     </div>
   );
