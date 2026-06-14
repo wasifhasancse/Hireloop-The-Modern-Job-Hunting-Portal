@@ -9,29 +9,50 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden rounded-3xl border border-(--surface-border) bg-(--surface-bg)/85 px-4 py-12 shadow-[0_30px_70px_rgba(3,9,22,0.28)] ring-1 ring-white/10 backdrop-blur-xl sm:px-6 md:px-10 md:py-16 lg:px-14">
+    <section
+      className="fade-up relative w-full overflow-hidden rounded-3xl border border-(--surface-border) bg-(--surface-bg)/88 px-4 py-10 shadow-(--shadow-xl) ring-1 ring-white/10 backdrop-blur-xl sm:px-6 sm:py-12 md:px-10 md:py-16 lg:px-14"
+      style={{ "--delay": "120ms" }}
+    >
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-20 top-0 h-56 w-56 rounded-full bg-cyan-500/16 blur-3xl" />
-        <div className="absolute -right-12 top-8 h-52 w-52 rounded-full bg-indigo-500/14 blur-3xl" />
-        <div className="absolute bottom-0 left-1/2 h-36 w-36 -translate-x-1/2 rounded-full bg-orange-500/12 blur-3xl" />
+        <div className="float-drift absolute -left-20 top-0 h-56 w-56 rounded-full bg-cyan-500/16 blur-3xl" />
+        <div
+          className="float-drift absolute -right-12 top-8 h-52 w-52 rounded-full bg-indigo-500/14 blur-3xl"
+          style={{ animationDelay: "700ms" }}
+        />
+        <div
+          className="float-drift absolute bottom-0 left-1/2 h-36 w-36 -translate-x-1/2 rounded-full bg-orange-500/12 blur-3xl"
+          style={{ animationDelay: "1200ms" }}
+        />
       </div>
 
       <div className="relative mx-auto flex max-w-4xl flex-col items-center text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-(--divider) bg-(--soft-bg) px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-(--text-secondary)">
+        <div
+          className="fade-up inline-flex items-center gap-2 rounded-full border border-(--divider) bg-(--soft-bg) px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-(--text-secondary)"
+          style={{ "--delay": "220ms" }}
+        >
           <FiStar className="text-sm text-cyan-500" />
           <span>50,000+ new jobs this month</span>
         </div>
 
-        <h1 className="mt-6 max-w-3xl text-3xl font-black leading-tight text-(--text-primary) sm:text-4xl md:text-5xl lg:text-6xl">
+        <h1
+          className="fade-up mt-5 max-w-3xl text-3xl font-black leading-tight text-(--text-primary) sm:mt-6 sm:text-4xl md:text-5xl lg:text-6xl"
+          style={{ "--delay": "320ms" }}
+        >
           Find Your Dream Job Today
         </h1>
 
-        <p className="mt-5 max-w-2xl text-sm leading-7 text-(--text-secondary) sm:text-base md:text-lg">
+        <p
+          className="fade-up mt-4 max-w-2xl text-sm leading-7 text-(--text-secondary) sm:mt-5 sm:text-base md:text-lg"
+          style={{ "--delay": "420ms" }}
+        >
           HireLoop connects top talent with world-class companies. Browse
           thousands of curated opportunities and land your next role faster.
         </p>
 
-        <div className="mt-8 w-full max-w-3xl rounded-2xl border border-(--divider) bg-(--nav-bg)/90 p-2 shadow-[0_14px_40px_rgba(4,11,25,0.25)] backdrop-blur md:p-2.5">
+        <div
+          className="fade-up mt-7 w-full max-w-3xl rounded-2xl border border-(--divider) bg-(--nav-bg)/92 p-2 shadow-(--shadow-lg) backdrop-blur md:mt-8 md:p-2.5"
+          style={{ "--delay": "520ms" }}
+        >
           <div className="flex flex-col gap-2 md:flex-row md:items-center">
             <label className="flex min-w-0 flex-1 items-center gap-2.5 rounded-xl border border-transparent px-3 py-2.5 text-(--text-secondary) transition focus-within:border-cyan-500/45 focus-within:bg-(--soft-bg)">
               <FiSearch className="shrink-0 text-base text-cyan-500" />
@@ -63,7 +84,10 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="mt-5 flex w-full max-w-3xl flex-wrap items-center justify-center gap-2 text-xs sm:text-sm">
+        <div
+          className="fade-up mt-5 flex w-full max-w-3xl flex-wrap items-center justify-center gap-2 text-xs sm:text-sm"
+          style={{ "--delay": "620ms" }}
+        >
           <span className="font-medium text-(--text-muted)">
             Trending Position
           </span>

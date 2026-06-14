@@ -1,12 +1,15 @@
 import Link from "next/link";
 import { FiArrowRight, FiBriefcase, FiMapPin } from "react-icons/fi";
 
-const JobCard = ({ job }) => {
+const JobCard = ({ job, delay = 0 }) => {
   if (!job) return null;
 
   return (
-    <article className="group h-full rounded-3xl border border-(--surface-border) bg-(--surface-bg)/85 p-5 shadow-[0_14px_36px_rgba(4,10,24,0.24)] ring-1 ring-white/5 backdrop-blur-xl transition hover:-translate-y-1 hover:border-cyan-500/40 sm:p-6">
-      <h3 className="text-2xl font-semibold tracking-tight text-(--text-primary)">
+    <article
+      className="fade-up group h-full rounded-3xl border border-(--surface-border) bg-(--surface-bg)/90 p-5 shadow-(--shadow-lg) ring-1 ring-white/5 backdrop-blur-xl transition hover:-translate-y-1 hover:border-cyan-500/40 sm:p-6"
+      style={{ "--delay": `${delay}ms` }}
+    >
+      <h3 className="text-xl font-semibold tracking-tight text-(--text-primary) sm:text-2xl">
         {job.title}
       </h3>
 

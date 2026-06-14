@@ -33,15 +33,18 @@ const Navbar = () => {
   }, [isDark]);
 
   const navItems = [
-    { label: "Browse Jobs", href: "#", icon: FiBriefcase },
-    { label: "Company", href: "#", icon: FaBuilding },
+    { label: "Browse Jobs", href: "/browse-jobs", icon: FiBriefcase },
+    { label: "Company", href: "/", icon: FaBuilding },
     { label: "Pricing", href: "#", icon: FiDollarSign },
   ];
 
   return (
-    <header className="w-full px-4 pt-5 md:px-8">
-      <nav className="mx-auto flex w-full max-w-6xl items-center rounded-2xl border border-(--nav-border) bg-(--nav-bg)/95 px-4 py-3 text-(--text-primary) shadow-[0_16px_50px_rgba(6,10,20,0.22)] ring-1 ring-white/10 backdrop-blur-xl md:px-6">
-        <Link href="#" className="flex items-center gap-2.5">
+    <header className="sticky top-0 z-50 w-full px-4 pt-5 md:px-8">
+      <nav
+        className="fade-up mx-auto flex w-full max-w-6xl items-center rounded-2xl border border-(--nav-border) bg-(--nav-bg)/92 px-4 py-3 text-(--text-primary) shadow-(--shadow-lg) ring-1 ring-white/10 backdrop-blur-xl md:px-6"
+        style={{ "--delay": "40ms" }}
+      >
+        <Link href="/" className="flex items-center gap-2.5">
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-linear-to-br from-cyan-400 via-blue-500 to-orange-500 text-white shadow-[0_8px_18px_rgba(37,99,235,0.45)]">
             <SiLoop className="text-lg" />
           </span>
@@ -83,7 +86,7 @@ const Navbar = () => {
           </button>
 
           <Link
-            href="#"
+            href="/"
             className="group ml-2 inline-flex items-center gap-2 rounded-xl border border-indigo-400/20 bg-indigo-500/10 px-4 py-2 text-sm font-semibold text-indigo-500 transition hover:bg-indigo-500/15"
           >
             <FiLogIn className="text-base" />
@@ -91,8 +94,8 @@ const Navbar = () => {
           </Link>
 
           <Link
-            href="#"
-            className="inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-indigo-500 via-blue-500 to-cyan-400 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_10px_28px_rgba(59,130,246,0.45)] transition hover:brightness-110"
+            href="/browse-jobs"
+            className="pulse-glow inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-indigo-500 via-blue-500 to-cyan-400 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_10px_28px_rgba(59,130,246,0.45)] transition hover:brightness-110"
           >
             <FiUserPlus className="text-base" />
             Get Started
@@ -129,7 +132,10 @@ const Navbar = () => {
       </nav>
 
       {mobileOpen && (
-        <div className="mx-auto mt-3 w-full max-w-6xl rounded-2xl border border-(--nav-border) bg-(--nav-bg)/95 p-3 shadow-[0_16px_50px_rgba(6,10,20,0.22)] ring-1 ring-white/10 md:hidden">
+        <div
+          className="fade-up mx-auto mt-3 w-full max-w-6xl rounded-2xl border border-(--nav-border) bg-(--nav-bg)/95 p-3 shadow-(--shadow-lg) ring-1 ring-white/10 md:hidden"
+          style={{ "--delay": "90ms" }}
+        >
           <div className="flex flex-col gap-1.5">
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -149,14 +155,14 @@ const Navbar = () => {
 
           <div className="mt-3 flex flex-col gap-2 border-t border-(--divider) pt-3">
             <Link
-              href="#"
+              href="/"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-indigo-500/10 px-4 py-2 text-sm font-semibold text-indigo-500"
             >
               <FiLogIn className="text-base" />
               Sign In
             </Link>
             <Link
-              href="#"
+              href="/browse-jobs"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-semibold text-white"
             >
               <FiUserPlus className="text-base" />

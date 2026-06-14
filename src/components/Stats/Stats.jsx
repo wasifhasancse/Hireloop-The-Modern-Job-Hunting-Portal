@@ -99,7 +99,8 @@ const Stats = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative mt-8 w-full overflow-hidden rounded-3xl border border-(--surface-border) bg-(--surface-bg)/85 px-4 py-10 shadow-[0_28px_70px_rgba(3,9,22,0.26)] ring-1 ring-white/10 backdrop-blur-xl sm:px-6 md:px-8 md:py-12"
+      className="fade-up relative mt-8 w-full overflow-hidden rounded-3xl border border-(--surface-border) bg-(--surface-bg)/88 px-4 py-10 shadow-(--shadow-xl) ring-1 ring-white/10 backdrop-blur-xl sm:px-6 md:px-8 md:py-12"
+      style={{ "--delay": "140ms" }}
     >
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/2 top-0 h-48 w-48 -translate-x-1/2 rounded-full bg-indigo-500/12 blur-3xl" />
@@ -107,7 +108,10 @@ const Stats = () => {
       </div>
 
       <div className="relative mx-auto max-w-5xl">
-        <h2 className="mx-auto max-w-3xl text-center text-2xl font-bold leading-tight text-(--text-primary) sm:text-3xl md:text-4xl">
+        <h2
+          className="fade-up mx-auto max-w-3xl text-center text-2xl font-bold leading-tight text-(--text-primary) sm:text-3xl md:text-4xl"
+          style={{ "--delay": "220ms" }}
+        >
           Assisting over{" "}
           <span className="text-indigo-400">15,000 job seekers</span> find their
           dream positions.
@@ -120,7 +124,8 @@ const Stats = () => {
             return (
               <article
                 key={stat.label}
-                className="rounded-2xl border border-(--divider) bg-(--nav-bg)/75 p-5 shadow-[0_10px_30px_rgba(5,12,28,0.25)] transition hover:-translate-y-0.5 hover:border-cyan-500/40"
+                className="fade-up rounded-2xl border border-(--divider) bg-(--nav-bg)/92 p-5 shadow-(--shadow-md) transition hover:-translate-y-0.5 hover:border-cyan-500/40"
+                style={{ "--delay": `${280 + index * 100}ms` }}
               >
                 <Icon className={`text-base ${stat.iconColor}`} />
                 <p className="mt-7 text-4xl font-black tracking-tight text-(--text-primary)">
