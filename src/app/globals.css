@@ -1,2 +1,52 @@
 @import "tailwindcss";
 @import "@heroui/styles";
+
+:root {
+  --app-bg: #f4f8ff;
+  --text-primary: #0b1225;
+  --text-secondary: #32415f;
+  --text-muted: #607099;
+  --nav-bg: #ffffff;
+  --nav-border: #d6e3ff;
+  --divider: #cfddfb;
+  --soft-bg: #edf3ff;
+  --surface-bg: #ffffff;
+  --surface-border: #d8e5ff;
+}
+
+html[data-theme="dark"] {
+  --app-bg: #060b17;
+  --text-primary: #f5f9ff;
+  --text-secondary: #c7d6f4;
+  --text-muted: #91a4ca;
+  --nav-bg: #0f1728;
+  --nav-border: #25365a;
+  --divider: #2a3d63;
+  --soft-bg: #14203a;
+  --surface-bg: #0d162a;
+  --surface-border: #22365c;
+}
+
+html,
+body {
+  transition:
+    background-color 220ms ease,
+    color 220ms ease;
+}
+
+body {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(14, 165, 233, 0.14), transparent 38%),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(249, 115, 22, 0.13),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(59, 130, 246, 0.08),
+      transparent 36%
+    ),
+    var(--app-bg);
+  color: var(--text-primary);
+}
