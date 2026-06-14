@@ -26,7 +26,10 @@ const PricingCard = ({
           <div className="absolute inset-0 -z-20 bg-linear-to-br from-indigo-500/20 via-cyan-500/12 to-purple-500/8" />
           <div className="border border-indigo-500/50 bg-(--nav-bg) ring-2 ring-indigo-500/40 shadow-2xl shadow-indigo-500/10" />
           {/* Shine effect on highlighted */}
-          <div className="absolute inset-0 -z-10 bg-linear-to-r from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 animate-pulse" style={{ animationDuration: "3s" }} />
+          <div
+            className="absolute inset-0 -z-10 bg-linear-to-r from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 animate-pulse"
+            style={{ animationDuration: "3s" }}
+          />
         </>
       ) : (
         <>
@@ -39,21 +42,28 @@ const PricingCard = ({
         <div className="flex items-start justify-between gap-3 mb-2">
           {/* Badge */}
           {badge && (
-            <div className="fade-up inline-flex items-center gap-1 rounded-full bg-linear-to-r from-purple-500/25 to-pink-500/25 px-3 py-1.5 ring-1 ring-purple-500/50 backdrop-blur-sm" style={{ "--delay": `${delay + 20}ms` }}>
+            <div
+              className="fade-up inline-flex items-center gap-1 rounded-full bg-linear-to-r from-purple-500/25 to-pink-500/25 px-3 py-1.5 ring-1 ring-purple-500/50 backdrop-blur-sm"
+              style={{ "--delay": `${delay + 20}ms` }}
+            >
               <div className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
               <span className="text-xs font-bold uppercase tracking-wider text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-400">
                 {badge}
               </span>
             </div>
           )}
-          
+
           {/* Icon placeholder for tier indication */}
-          <div className={`w-10 h-10 rounded-xl flex items-center justify-center backdrop-blur transition-all duration-300 ${
-            highlighted 
-              ? 'bg-linear-to-br from-indigo-500/30 to-cyan-500/20 ring-2 ring-indigo-500/30' 
-              : 'bg-slate-900/10 ring-1 ring-white/10 group-hover:ring-indigo-500/30'
-          }`}>
-            <span className={`text-lg font-bold ${highlighted ? 'text-indigo-400' : 'text-(--text-muted)'}`}>
+          <div
+            className={`w-10 h-10 rounded-xl flex items-center justify-center backdrop-blur transition-all duration-300 ${
+              highlighted
+                ? "bg-linear-to-br from-indigo-500/30 to-cyan-500/20 ring-2 ring-indigo-500/30"
+                : "bg-slate-900/10 ring-1 ring-white/10 group-hover:ring-indigo-500/30"
+            }`}
+          >
+            <span
+              className={`text-lg font-bold ${highlighted ? "text-indigo-400" : "text-(--text-muted)"}`}
+            >
               {name === "Starter" ? "📱" : name === "Growth" ? "⚡" : "👑"}
             </span>
           </div>
